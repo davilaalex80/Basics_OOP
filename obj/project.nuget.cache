@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "6gwOpiU4zLpfE2B/5O6oDzQcAb0wFJPQj90XK8QQrKX9sLILjQEyt47Y5z2ZD4Rzxl9pjjSVCHyB6IdSDeIJMQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\davila.a\\source\\repos\\IntroOOP\\IntroOOP.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://172.24.0.46/NugetFeed/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
