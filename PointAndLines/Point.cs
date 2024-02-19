@@ -1,32 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IntroOOP.PointAndLines
+﻿namespace IntroOOP.PointAndLines
 {
-    class Point
+    class User
     {
-        private int x;
-        public int y;
+        private string username;
+        private int password;
 
-        public int X
+        public string Username
         {
-            get { return x; } 
-            set { x = value;}
+            get 
+            { 
+                return "the username is " + username; 
+            } 
+            set 
+            { 
+                if (value.Length >= 4 && value.Length <= 10)
+                {
+                    username = value;
+                }
+                else
+                {
+                    Console.WriteLine("username no cumple las condiciones");
+                }
+            }
         }
 
-        //empty constructor
-        public Point()
+        public int Password
+        {
+            get 
+            { 
+                return password; 
+            }
+            set
+            {
+                if (value >= 4 && value <= 10)
+                {
+                    password = value;
+                }
+                else
+                {
+                    Console.WriteLine("password no cumple las condiciones");
+                }
+            }
+        }
+
+        public User()
         {
 
         }
 
-        public Point(int x, int y)
+        public User(string username, int password)
         {
-            this.x = x;
-            this.y = y;
+            this.username = username;
+            this.password = password;
         }
     }
 }

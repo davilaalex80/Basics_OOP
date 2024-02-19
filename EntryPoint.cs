@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IntroOOP.PointAndLines;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -9,15 +10,12 @@ class EntryPoint
 {
     static void Main()
     {
-        Point point = new Point(5,3);
+        User user = new User();
+        user.Username = "vanilla";
+        user.Password = 5;
 
-        //point.X = 5;
-        //point.Y = 3;
-
-        Point pointTwo = new Point();
-        pointTwo.X = 5;
-
-        Console.WriteLine(point.X);
-        Console.WriteLine(point.Y);
+        Console.WriteLine("the username is " + user.Username);
+        Console.WriteLine("the password is "+ user.Password);
+        //user.Username = "ab";
     }
 }
