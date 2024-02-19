@@ -6,17 +6,17 @@
         //they can be accessed directly from the class without instantiating it.
         public static int currentID;
 
+        //create a new field with my data type 'enum' called Race
+        public Race race;
+
         //const is a hardcorded value in the code
         //readonly is an assigned value at runtime through code logic
-        public const int MAX_HEIGHT= 180;
+        public readonly int MAX_HEIGHT= 180;
         public readonly int ID;
 
         private string username;
         private int password;
         
-        //it can only get its value from the constructor
-        public readonly int id;
-
         public string Username
         {
             //read-only property
@@ -43,17 +43,28 @@
             }
         }
 
+        //my constructor
         public User()
         {
             currentID++;
-            id = currentID;
+            ID = currentID;
         }
 
-        public User(string username)
+        public User(string username, Race race)
         {
             currentID++;
-            id = currentID;
+            ID = currentID;
             this.username = username;
+            this.race = race;
+
+            if (this.race == Race.Marsian)
+            {
+                MAX_HEIGHT++;
+            }
+            else if ( this.race == Race.Earthling)
+            {
+                MAX_HEIGHT = 180;
+            }
         }
     }
 }
