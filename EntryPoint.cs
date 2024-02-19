@@ -11,9 +11,13 @@ class EntryPoint
     static void Main()
     {
         User user = new User("vanilla");
-        user.Password = 5;
+        Console.Write(User.ID + " ");
+        User secondUser = new User();
 
-        Console.WriteLine(user.Username);
+        //how do I know when to call user and when to call User?
+        //Console.WriteLine(user.Username);
+        Console.WriteLine(User.ID);
+
         //Console.WriteLine("the password is " + user.Password);
         //user.Username = "ab";
     }

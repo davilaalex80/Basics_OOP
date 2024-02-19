@@ -2,6 +2,9 @@
 {
     class User
     {
+        //static field are not dependant on the instance of a given class.
+        //they can be accessed directly from the class without instantiating it.
+        public static int ID;
         private string username;
         private int password;
 
@@ -33,11 +36,12 @@
 
         public User()
         {
-
+            ID++;
         }
 
         public User(string username)
         {
+            ID++;
             this.username = username;
         }
     }
