@@ -66,5 +66,13 @@
                 MAX_HEIGHT = 180;
             }
         }
+
+        public void SayMyName()
+        {
+            Utilities.ColorfulWriteline(this.username, System.ConsoleColor.DarkGreen);
+            //GetInstance() will give us access to the methods or properties we created
+            //Utilities.GetInstance() -->> complete it
+
+        }
     }
 }

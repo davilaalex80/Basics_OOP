@@ -1,4 +1,5 @@
-﻿using IntroOOP.PointAndLines;
+﻿using IntroOOP;
+using IntroOOP.PointAndLines;
 using System;
 
 class EntryPoint
@@ -8,12 +9,15 @@ class EntryPoint
         //*Regarding STATICS* 
         //On every instantiation of the User class, the currentId gets incremented by one, since its static it is shared among all classes.
         //and the id remembers the current value of every instnace, so that we dont loce the count after a new Class was instantiated.
-        User firstUser = new("vanilla", Race.Earthling);
+        User user = new("vanilla", Race.Earthling);
         User secondUser = new User();
         User thirdUser = new User();
 
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(firstUser.ID);
+        //Utilities.ColorfulWriteline(user.Username, ConsoleColor.DarkBlue);
+        //this works the same:
+        user.SayMyName();
+
+        Console.WriteLine(user.ID);
         Console.WriteLine(secondUser.ID);
         Console.WriteLine(thirdUser.ID);
 
