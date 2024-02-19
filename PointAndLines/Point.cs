@@ -7,29 +7,17 @@
 
         public string Username
         {
+            //read-only property
             get 
             { 
                 return "the username is " + username; 
             } 
-            set 
-            { 
-                if (value.Length >= 4 && value.Length <= 10)
-                {
-                    username = value;
-                }
-                else
-                {
-                    Console.WriteLine("username no cumple las condiciones");
-                }
-            }
         }
 
         public int Password
         {
-            get 
-            { 
-                return password; 
-            }
+            
+            //write-only property
             set
             {
                 if (value >= 4 && value <= 10)
@@ -48,10 +36,9 @@
 
         }
 
-        public User(string username, int password)
+        public User(string username)
         {
             this.username = username;
-            this.password = password;
         }
     }
 }

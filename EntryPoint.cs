@@ -10,12 +10,11 @@ class EntryPoint
 {
     static void Main()
     {
-        User user = new User();
-        user.Username = "vanilla";
+        User user = new User("vanilla");
         user.Password = 5;
 
-        Console.WriteLine("the username is " + user.Username);
-        Console.WriteLine("the password is "+ user.Password);
+        Console.WriteLine(user.Username);
+        //Console.WriteLine("the password is " + user.Password);
         //user.Username = "ab";
     }
 }
