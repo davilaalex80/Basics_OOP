@@ -4,9 +4,18 @@
     {
         //static field are not dependant on the instance of a given class.
         //they can be accessed directly from the class without instantiating it.
-        public static int ID;
+        public static int currentID;
+
+        //const is a hardcorded value in the code
+        //readonly is an assigned value at runtime through code logic
+        public const int MAX_HEIGHT= 180;
+        public readonly int ID;
+
         private string username;
         private int password;
+        
+        //it can only get its value from the constructor
+        public readonly int id;
 
         public string Username
         {
@@ -36,12 +45,14 @@
 
         public User()
         {
-            ID++;
+            currentID++;
+            id = currentID;
         }
 
         public User(string username)
         {
-            ID++;
+            currentID++;
+            id = currentID;
             this.username = username;
         }
     }
